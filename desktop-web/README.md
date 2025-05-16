@@ -41,6 +41,7 @@ npm run dev
    - `Key:` VITE_API_BASE_URL
    - `Value:` https://collab-ecommerce-api.onrender.com  (Render API)  
 
-7. Click Deploy Button
+7. Click Deploy Button   
+8. Hosted @ https://collab-ecommerce-app-web.vercel.app/
    
  

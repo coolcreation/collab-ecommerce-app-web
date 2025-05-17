@@ -4,6 +4,7 @@ import { Routes,  Route} from 'react-router-dom';
 // Components
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
+import SubFooter from './components/SubFooter.jsx';
 import NewsletterSignupAndNewArrivals from './components/NewsletterSignupAndNewArrivals.jsx';
 
 // Pages
@@ -23,18 +24,11 @@ function App() {
             <HomePage />
             <NewsletterSignupAndNewArrivals />
             <Footer />
+            <SubFooter />
           </>
         }/>
-    
 
         {/* Admin Routes */}
-
-        {/* <Route path='/login' element={
-          <>
-          <Navbar />
-          <AdminLoginPage />
-          </>
-        } /> */}
 
         <Route path="/admin" element={
            <>

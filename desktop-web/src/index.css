@@ -159,6 +159,27 @@ body{
    fill: var(--nav-link-color) !important;
 }
 
+/****** SUB-FOOTER ******/
+.sub-footer{
+  width: 100%;
+  gap: 15px !important;
+  background-color: #2e2e2e;
+}
+.sub-footer .sub-footer-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid white; */
+  width: 50%;
+}
+.sub-footer .sub-footer-section img{
+  max-width: 350px;
+}
+.sub-footer .sub-footer-section p{
+  color: white;
+}
+
+
 
 /***********************************************/
 /**************** MEDIA QUERIES ****************/

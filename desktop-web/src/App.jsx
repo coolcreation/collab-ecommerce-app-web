@@ -3,7 +3,8 @@ import { Routes,  Route} from 'react-router-dom';
 
 // Components
 import Navbar from './components/Navbar.jsx'
-import Footer from './components/Footer.jsx';
+import Footer from './components/Footer.jsx'
+import NewsletterSignupAndNewArrivals from './components/NewsletterSignupAndNewArrivals.jsx';
 
 // Pages
 import HomePage from './pages/HomePage.jsx';
@@ -20,6 +21,7 @@ function App() {
           <>
             <Navbar />
             <HomePage />
+            <NewsletterSignupAndNewArrivals />
             <Footer />
           </>
         }/>

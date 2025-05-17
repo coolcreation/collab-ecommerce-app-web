@@ -3,23 +3,25 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-black navbar-dark px-2 px-lg-3">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+
+                <Link to="/" className="nav-link">
                     <img src={'./vite.svg'} alt="" />
-                </a>
+                </Link>
+
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0 w-100">
+                <ul className="navbar-nav w-100 align-items-lg-center bg-black">
 
                     {/* <li className="nav-item">
                         <a className="nav-link active" aria-current="page" href="#">Home</a>
                     </li> */}
 
 
-                    <Link to="/" className="nav-link">
+                    <Link to="/" className="nav-link link">
                         Home
                     </Link>
 
@@ -34,7 +36,7 @@ export default function Navbar() {
                         </ul>
                     </li> */}
 
-                    <Link to="/admin" className="ms-auto">
+                    <Link to="/admin" className="nav-link ms-0 ms-lg-auto">
                         <img src={"./admin-icon.png"} alt="" width="30" />
                     </Link>
 

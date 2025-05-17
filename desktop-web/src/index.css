@@ -132,7 +132,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid white; */
   min-width: calc(25% - 11px);
 }
 
@@ -169,7 +168,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid white; */
   width: 50%;
 }
 .sub-footer .sub-footer-section img{
@@ -177,7 +175,7 @@ body{
 }
 .sub-footer .sub-footer-section p{
   color: white;
-}
+} 
 
 
 

@@ -27,16 +27,8 @@ function App() {
             <SubFooter />
           </>
         }/>
-    
 
         {/* Admin Routes */}
-
-        {/* <Route path='/login' element={
-          <>
-          <Navbar />
-          <AdminLoginPage />
-          </>
-        } /> */}
 
         <Route path="/admin" element={
            <>

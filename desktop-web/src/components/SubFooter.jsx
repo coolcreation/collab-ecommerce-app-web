@@ -9,9 +9,9 @@ export default function SubFooter() {
         </div>
 
         <div className='sub-footer-section mx-auto py-2'>
-            <img src={"./payment-methods.png"} alt="" />
+            <img src={"./payment-methods.png"} alt="payment_methods_image" />
         </div>
 
     </div>
-  )
-} 
+  ) 
+}   

@@ -1,21 +1,51 @@
+*, *::after, *::before{
+   box-sizing: border-box !important;
+}
+
 :root {
   --hover-grey: #dadde1;
   --primary-color: #06bcee;
   --text-color: #1c1e21;
+  --nav-link-color: #93c54b;
 }
 
-
 body{
+  position: relative;
   display: flex !important;
-  flex-direction: column;
+  flex-direction: column !important;
   width: 100%;
-  height: 100vh !important;
-  background-color: rgb(236, 236, 236);
+  min-height: 100vh !important;
+  background-color: rgb(155, 155, 155);
+}
+
+#root {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100%;
+  min-height: 100vh !important;
 }
 
 .navbar{
   width: 100%;
+  height: 60px;
 }
+.navbar .navbar-nav{
+  position: absolute;
+  top: 61px;
+  left: 0;
+  min-width: 100%;
+  padding: 1rem;
+}
+
+/** Since we are not using BS5 anchor tags we need a way for hover effect, 
+ ** React Link doesn't provide hover effect, so we make our own! */
+.link{
+  color: var(--nav-link-color)
+}
+.link:hover{
+  color: RGBA(118, 158, 60, var(--bs-link-opacity, 1)) !important;
+}
+
 
 
 /****** MAIN CONTAINER ******/
@@ -23,20 +53,183 @@ body{
   display: flex;
   flex-direction: column !important;
   flex: 1 !important;
-  /* background-color: aquamarine; */
+  background-color: rgb(255, 255, 255);
+  margin: 30px 0;
+  padding: 0 0 30px 0;
 }
+
+
+/****** Newsletter Signup And New Arrivals ******/
+.newsletter-and-newarrivals{
+   /* background-color: #1c1e21; */
+   background-color: black;
+   min-height: 400px;
+}
+.newsletter-and-newarrivals .left{
+   height: 250px;
+   justify-content: space-around;
+   background-color: black;
+   width: 100%;
+   padding: 1rem;
+}
+.newsletter-and-newarrivals .left .left-top form {
+   max-width: 500px;
+   margin: 0 auto
+}
+.newsletter-and-newarrivals .left .left-top form label{
+   font-size: clamp(.85rem, 1.8vw, 1rem);
+}
+
+.newsletter-and-newarrivals .left .left-bottom{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-and-newarrivals .right{
+   background-color: black;
+   width: 100%;
+   margin: 1rem;
+   padding: 1rem !important
+}
+.newsletter-and-newarrivals .right .card{
+   flex-direction: column;
+   max-width: 340px;
+   border: none !important;
+}
+.newsletter-and-newarrivals .right .card .card-image-container{
+   display: flex;
+   justify-content: center;
+   /* background-color: #fff !important;
+   padding: .2rem;
+   border-radius: 10px; */
+}
+.newsletter-and-newarrivals .right .card .sample-product-image{
+   max-width: 80%;
+   height: auto;
+   border-radius: 4px;
+}
+.newsletter-and-newarrivals .right .card .card-body{
+   padding: 1rem 2rem 2rem 2rem
+}
+.newsletter-and-newarrivals .right .card .card-body h5{
+   color: white;
+   font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+.newsletter-and-newarrivals .right .card .card-body p{
+   color: white;
+   font-size: clamp(.85rem, 1.8vw, .95rem);
+}
+
 
 /****** FOOTER ******/
 .footer{
-  gap: 15px !important;
+  width: 100%;
   min-height: 100px;
+  gap: 15px !important;
+  background-color: #2e2e2e;
 }
-.footer div{
+.footer .footer-section{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
   min-width: calc(25% - 11px);
-  min-height: 90px;
 }
 
+.footer .slogan .slogan-text{
+  max-width: 590px;
+}
+.footer .footer-section img{
+  width: 100%;
+  min-width: 60px;
+}
+.footer .footer-section p{
+  text-align: justify;
+  margin: 0;
+}
+.social-icons a img{
+    width: 37px !important;
+    border-radius: 50%;
+}
+.social-icons svg {
+  fill: rgb(211, 211, 211);
+  height: 30px;
+}
+.social-icons a svg:hover {
+   fill: var(--nav-link-color) !important;
+}
+
+/****** SUB-FOOTER ******/
+.sub-footer{
+  width: 100%;
+  gap: 15px !important;
+  background-color: #2e2e2e;
+}
+.sub-footer .sub-footer-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.sub-footer .sub-footer-section img{
+  max-width: 350px;
+}
+.sub-footer .sub-footer-section p{
+  color: white;
+} 
+
+
+
+/***********************************************/
+/**************** MEDIA QUERIES ****************/
+/***********************************************/
+@media screen and (max-width: 576px) {
+
+}
+  
+@media screen and (min-width: 550px) {
+    /* MODAL */
+    .modal{
+        max-width: 100%;
+        width: 100%;
+        transform: translateX(0%) !important;
+        left: 0;
+    }
+}
+  
+@media only screen and (min-width: 768px) {
+}
+  
+@media only screen and (min-width: 992px) {
+  .navbar .navbar-nav{
+    position: relative;
+    top: 0;
+    padding: 0;
+  }
+  .newsletter-and-newarrivals .left{
+    width: 50%;
+    height: 330px;
+  }
+  .newsletter-and-newarrivals .right{
+    width: 50%;
+  }
+  .newsletter-and-newarrivals .right .card{
+   flex-direction: row;
+   align-items: center;
+   max-width: 100%;
+  }
+  .newsletter-and-newarrivals .right .card .card-image-container{
+    width: 220px;
+    max-height: 120px;
+  }
+  .newsletter-and-newarrivals .right .card .card-body{
+   padding: 1rem .5rem
+  }
+  .newsletter-and-newarrivals .right .card .card-body .btn{
+    max-width: 270px;
+  }
+
+}
+  
+@media only screen and (min-width: 1220px) {
+
+}

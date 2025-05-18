@@ -3,7 +3,9 @@ import { Routes,  Route, BrowserRouter} from 'react-router-dom';
 
 // Components
 import Navbar from './components/Navbar.jsx'
-import Footer from './components/Footer.jsx';
+import Footer from './components/Footer.jsx'
+import SubFooter from './components/SubFooter.jsx';
+import NewsletterSignupAndNewArrivals from './components/NewsletterSignupAndNewArrivals.jsx';
 
 // Pages
 import HomePage from './pages/HomePage.jsx';
@@ -22,38 +24,13 @@ function App() {
           <>
             <Navbar />
             <HomePage />
+            <NewsletterSignupAndNewArrivals />
             <Footer />
+            <SubFooter />
           </>
         }/>
 
-        <Route path='/products' element={
-            <>
-                <Navbar />
-                <ProductsPage />
-                <Footer />
-            </>
-            } />
-
-
-        <Route path="/products/:id" element={
-            <>
-            <Navbar />
-            <ProductDetailPage />
-            <Footer />
-            </>
-            
-            
-            
-            } />
-
         {/* Admin Routes */}
-
-        {/* <Route path='/login' element={
-          <>
-          <Navbar />
-          <AdminLoginPage />
-          </>
-        } /> */}
 
         <Route path="/admin" element={
            <>

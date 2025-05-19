@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes,  Route} from 'react-router-dom';
+import { Routes,  Route, BrowserRouter} from 'react-router-dom';
 
 // Components
 import Navbar from './components/Navbar.jsx'
@@ -10,6 +10,8 @@ import NewsletterSignupAndNewArrivals from './components/NewsletterSignupAndNewA
 // Pages
 import HomePage from './pages/HomePage.jsx';
 import UsersCRUD from './admin/pages/UsersCRUD.jsx';
+import ProductsPage from './pages/ProductsPage.jsx';
+import ProductDetailPage from './pages/ProductDetailPage.jsx';
 
 
 function App() {
@@ -27,6 +29,27 @@ function App() {
             <SubFooter />
           </>
         }/>
+
+        <Route path="/products" element={
+          <>
+            <Navbar />
+            <ProductsPage />
+            <Footer />
+            <SubFooter />
+          </>
+        } />
+
+        {/* Product Detail Route */}
+
+
+        <Route path="/products/:id" element={
+          <>
+          <Navbar />
+          <ProductDetailPage />
+          <Footer />
+          </>
+          
+          } />
 
         {/* Admin Routes */}
 

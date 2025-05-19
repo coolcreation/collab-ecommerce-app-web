@@ -47,7 +47,7 @@ export default function NewsletterSignupAndNewArrivals() {
             <div class="card-body justify-content-center">
                 <h5 class="card-title">Suggested product</h5>
                 <p class="card-text">Some quick text to upsell our item</p>
-                <a href="#" class="btn btn-primary col-12 py-1">View product</a>
+                <a href="products/1" class="btn btn-primary col-12 py-1">View product</a>
             </div>
         </div>
 
@@ -58,7 +58,7 @@ export default function NewsletterSignupAndNewArrivals() {
             <div class="card-body justify-content-center">
                 <h5 class="card-title">Another Suggested product</h5>
                 <p class="card-text">Some quick text to upsell our item</p>
-                <a href="#" class="btn btn-primary col-12 py-1">View product</a>
+                <a href="products/2" class="btn btn-primary col-12 py-1">View product</a>
             </div>
         </div>
 

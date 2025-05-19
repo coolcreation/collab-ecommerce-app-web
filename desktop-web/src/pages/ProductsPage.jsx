@@ -4,24 +4,59 @@ import ProductCard from '../components/ProductCard';
 const products = [
   {
     id: 1,
-    name: 'Product 1',
-    description: 'This is product 1',
-    image: 'https://example.com/product1.jpg',
-    price: 19.99,
+    name: "MSI Gaming Laptop",
+    description: "Perfect for Professional Gamers needing portability",
+    image: "/sample-product-1.jpg",
+    price: 1099.99,
+    reviews: [
+      {
+        user: "John Doe",
+        rating: 5,
+        comment: "Great gaming laptop! Highly recommend.",
+      },
+      {
+        user: "Jane Smith",
+        rating: 4,
+        comment: "Very good, but could be better.",
+      },
+    ]
   },
   {
     id: 2,
-    name: 'Product 2',
-    description: 'This is product 2',
-    image: 'https://example.com/product2.jpg',
-    price: 9.99,
+    name: "MSI Laptop",
+    description: "Perfect all around laptop for gamers and students",
+    image: "/sample-product-2.jpg",
+    price: 899.99,
+    reviews: [
+      {
+        user: "John Doe",
+        rating: 5,
+        comment: "Great student laptop! Highly recommend.",
+      },
+      {
+        user: "Jane Smith",
+        rating: 4,
+        comment: "Very good, but could be better.",
+      },
+      {
+        user: "John Doe",
+        rating: 1,
+        comment: "Great student laptop! Highly recommend.",
+      },
+      {
+        user: "Jane Smith",
+        rating: 2,
+        comment: "Very good, but could be better.",
+      },
+    ]
   },
 ];
 
 
+
 const ProductsPage = () => {
     return (
-    <div className="container mt-4">
+    <div className="container main-container container-fluid mt-4">
       <div className="row">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

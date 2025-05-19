@@ -30,6 +30,27 @@ function App() {
           </>
         }/>
 
+        <Route path="/products" element={
+          <>
+            <Navbar />
+            <ProductsPage />
+            <Footer />
+            <SubFooter />
+          </>
+        } />
+
+        {/* Product Detail Route */}
+
+
+        <Route path="/products/:id" element={
+          <>
+          <Navbar />
+          <ProductDetailPage />
+          <Footer />
+          </>
+          
+          } />
+
         {/* Admin Routes */}
 
         <Route path="/admin" element={

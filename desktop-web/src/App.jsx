@@ -13,6 +13,8 @@ import UsersCRUD from './admin/pages/UsersCRUD.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
 import ProductDetailPage from './pages/ProductDetailPage.jsx';
 import ProductsCRUD from './admin/pages/ProductsCRUD.jsx';
+import UserDashboard from './pages/UserDashboard.jsx';
+
 
 
 function App() {
@@ -51,6 +53,16 @@ function App() {
           </>
           
           } />
+
+        {/* User Dashboard Route*/}
+          <Route path="/user-dashboard" element={
+          <>
+            <Navbar />
+            <UserDashboard/>
+            <Footer />
+            <SubFooter />
+          </>
+        } />
 
         {/* Admin Routes */}
 

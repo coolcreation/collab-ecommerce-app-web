@@ -40,6 +40,11 @@ export default function Navbar() {
                         <img src={"./admin-icon.png"} alt="" width="30" />
                     </Link>
 
+                    {/* Temporary (Anticipating login button/form) */}
+                    <Link to="/user-dashboard" className="nav-link link">
+                        User Login
+                    </Link>
+
                 </ul>
 
                 </div>

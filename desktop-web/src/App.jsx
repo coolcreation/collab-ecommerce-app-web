@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage.jsx';
 import UsersCRUD from './admin/pages/UsersCRUD.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
 import ProductDetailPage from './pages/ProductDetailPage.jsx';
+import ProductsCRUD from './admin/pages/ProductsCRUD.jsx';
 
 
 function App() {
@@ -57,6 +58,14 @@ function App() {
            <>
             <Navbar />
             <UsersCRUD />
+            <Footer />
+           </>
+        } />
+
+           <Route path="/admin/products" element={
+           <>
+            <Navbar />
+            <ProductsCRUD />
             <Footer />
            </>
         } />

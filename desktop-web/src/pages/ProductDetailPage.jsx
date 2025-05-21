@@ -1,48 +1,49 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import products from "../staticData/products";
 
 
 
-const products = [
-  {
-    id: 1,
-    name: "MSI Gaming Laptop",
-    description: "Perfect for Professional Gamers needing portability",
-    image: "/sample-product-1.jpg",
-    price: 1099.99,
-    reviews: [
-      {
-        user: "John Doe",
-        rating: 5,
-        comment: "Great gaming laptop! Highly recommend.",
-      },
-      {
-        user: "Jane Smith",
-        rating: 4,
-        comment: "Very good, but could be better.",
-      },
-    ]
-  },
-  {
-    id: 2,
-    name: "MSI Laptop",
-    description: "Perfect all around laptop for gamers and students",
-    image: "/sample-product-2.jpg",
-    price: 899.99,
-    reviews: [
-      {
-        user: "John Doe",
-        rating: 5,
-        comment: "Great student laptop! Highly recommend.",
-      },
-      {
-        user: "Jane Smith",
-        rating: 4,
-        comment: "Very good, but could be better.",
-      },
-    ]
-  },
-];
+// const products = [
+//   {
+//     id: 1,
+//     name: "MSI Gaming Laptop",
+//     description: "Perfect for Professional Gamers needing portability",
+//     image: "/sample-product-1.jpg",
+//     price: 1099.99,
+//     reviews: [
+//       {
+//         user: "John Doe",
+//         rating: 5,
+//         comment: "Great gaming laptop! Highly recommend.",
+//       },
+//       {
+//         user: "Jane Smith",
+//         rating: 4,
+//         comment: "Very good, but could be better.",
+//       },
+//     ]
+//   },
+//   {
+//     id: 2,
+//     name: "MSI Laptop",
+//     description: "Perfect all around laptop for gamers and students",
+//     image: "/sample-product-2.jpg",
+//     price: 899.99,
+//     reviews: [
+//       {
+//         user: "John Doe",
+//         rating: 5,
+//         comment: "Great student laptop! Highly recommend.",
+//       },
+//       {
+//         user: "Jane Smith",
+//         rating: 4,
+//         comment: "Very good, but could be better.",
+//       },
+//     ]
+//   },
+// ];
 
 const ProductDetailPage = () => {
   const { id } = useParams();
@@ -62,6 +63,11 @@ const ProductDetailPage = () => {
           </div>
           <div className="col-md-6">
             <h1>{product.name}</h1>
+            {product.categories.map((category, index) => (
+              <span key={index} className="badge bg-secondary me-2">
+                {category}
+              </span>
+            ))}
             <p>{product.description}</p>
             <p>Price: ${product.price}</p>
 

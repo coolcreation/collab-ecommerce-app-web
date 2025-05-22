@@ -1,21 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react"
+import { Link } from "react-router-dom";
+import UserLoginButton from "./UserLoginButton";
 
 
 export default function Navbar() {
-
-const { loginWithRedirect, isAuthenticated } = useAuth0()
-  const navigate = useNavigate()
-
-  const handleDashboardClick = (e) => {
-    e.preventDefault()
-    if (!isAuthenticated) {
-      loginWithRedirect({ appState: { returnTo: "/user-dashboard" } })
-    } else {
-      navigate("/user-dashboard")
-    }
-  }
-
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-black navbar-dark px-2 px-lg-3">
@@ -55,14 +42,7 @@ const { loginWithRedirect, isAuthenticated } = useAuth0()
                         <img src={"./admin-icon.png"} alt="" width="30" />
                     </Link>
 
-                    {/* Temporary (to be replaced with component) */}
-                    <Link
-                    to="#"
-                    className="nav-link link"
-                    onClick={handleDashboardClick}
-                    >
-                    User Login
-                    </Link>
+                    <UserLoginButton/>
 
 
                 </ul>

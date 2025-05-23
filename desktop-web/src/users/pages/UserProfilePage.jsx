@@ -11,13 +11,13 @@ export default function UserProfilePage () {
   return (
     isAuthenticated && (
  <div className="main-container">
-        <div className="container">
+      <div className="container">
         <h2>{user.name}</h2>
         <p>{user.nickname}</p>
         <p>{user.email}</p>
         <Link to='/user-dashboard' className="btn btn-primary">Back</Link>
       </div>
-      </div>
+    </div>
     )
   );
 };

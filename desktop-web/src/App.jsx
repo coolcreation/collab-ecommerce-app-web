@@ -13,8 +13,9 @@ import UsersCRUD from './admin/pages/UsersCRUD.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
 import ProductDetailPage from './pages/ProductDetailPage.jsx';
 import ProductsCRUD from './admin/pages/ProductsCRUD.jsx';
-import UserDashboard from './pages/UserDashboard.jsx';
-import UserProfile from './pages/UserProfilePage.jsx';
+import UserDashboard from './users/pages/UserDashboard.jsx';
+import UserProfile from './users/pages/UserProfilePage.jsx';
+import ShoppingCart from './users/ShoppingCart.jsx';
 
 
 
@@ -69,6 +70,15 @@ function App() {
           <>
             <Navbar />
             <UserProfile/>
+            <Footer />
+            <SubFooter />
+          </>
+        } />
+
+        <Route path="/user/cart" element={
+          <>
+            <Navbar />
+            <ShoppingCart/>
             <Footer />
             <SubFooter />
           </>

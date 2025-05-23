@@ -14,8 +14,8 @@ export default function UserDashboard() {
           <h1 className="text-center fs-3 my-4">Dashboard</h1>
 
           <div className="d-flex justify-content-center gap-4 flex-wrap mb-4">
-            <a href="/user/cart" className="btn btn-outline-primary">View Cart</a>
-            <a href="/user/orders" className="btn btn-outline-secondary">Past Orders</a>
+            <Link to="/user/cart" className="btn btn-outline-primary">View Cart</Link>
+            <Link to="/user/orders" className="btn btn-outline-secondary">Past Orders</Link>
             <Link to="/user/profile" className="btn btn-outline-info">Profile</Link>
           </div>
 

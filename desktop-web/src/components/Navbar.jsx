@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import UserLoginButton from "./UserLoginButton";
+
 
 export default function Navbar() {
   return (
@@ -39,6 +41,9 @@ export default function Navbar() {
                     <Link to="/admin" className="nav-link ms-0 ms-lg-auto">
                         <img src={"./admin-icon.png"} alt="" width="30" />
                     </Link>
+
+                    <UserLoginButton/>
+
 
                 </ul>
 

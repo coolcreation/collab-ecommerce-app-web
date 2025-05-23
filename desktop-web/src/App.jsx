@@ -14,6 +14,7 @@ import ProductsPage from './pages/ProductsPage.jsx';
 import ProductDetailPage from './pages/ProductDetailPage.jsx';
 import ProductsCRUD from './admin/pages/ProductsCRUD.jsx';
 import UserDashboard from './pages/UserDashboard.jsx';
+import UserProfile from './pages/UserProfilePage.jsx';
 
 
 
@@ -54,11 +55,20 @@ function App() {
           
           } />
 
-        {/* User Dashboard Route*/}
+        {/* User Dashboard Routes*/}
           <Route path="/user-dashboard" element={
           <>
             <Navbar />
             <UserDashboard/>
+            <Footer />
+            <SubFooter />
+          </>
+        } />
+
+         <Route path="/user/profile" element={
+          <>
+            <Navbar />
+            <UserProfile/>
             <Footer />
             <SubFooter />
           </>

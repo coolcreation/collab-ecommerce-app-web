@@ -15,7 +15,7 @@ import ProductDetailPage from './pages/ProductDetailPage.jsx';
 import ProductsCRUD from './admin/pages/ProductsCRUD.jsx';
 import UserDashboard from './users/pages/UserDashboard.jsx';
 import UserProfile from './users/pages/UserProfilePage.jsx';
-import ShoppingCart from './users/ShoppingCart.jsx';
+import ShoppingCart from './users/pages/ShoppingCart.jsx';
 
 
 

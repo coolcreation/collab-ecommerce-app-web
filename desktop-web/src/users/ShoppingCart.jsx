@@ -52,7 +52,7 @@ export default function ShoppingCart () {
                       </div>
                       <button
                         className="btn btn-outline-secondary w-100"
-                        onClick={() => removeFromCart(item.id)}
+                        onClick={() => removeFromCart(item)}
                       >
                         Remove
                       </button>

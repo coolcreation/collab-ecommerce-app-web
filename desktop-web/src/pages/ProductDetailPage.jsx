@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import products from "../staticData/products";
+import { useCart } from "../users/context/ShoppingCartContext";
 
 
 
@@ -48,6 +49,7 @@ import products from "../staticData/products";
 const ProductDetailPage = () => {
   const { id } = useParams();
   const product = products.find((product) => product.id === parseInt(id));
+  const {addToCart} = useCart();
 
   if (!product) {
     return <h1>Product not found</h1>;
@@ -71,7 +73,12 @@ const ProductDetailPage = () => {
             <p>{product.description}</p>
             <p>Price: ${product.price}</p>
 
-            <button className="btn btn-primary">Add to Cart</button>
+            <button 
+              className="btn btn-primary"
+              onClick={() => addToCart(product)}
+            >
+            Add to Cart
+            </button>
           </div>
         </div>
       </div>

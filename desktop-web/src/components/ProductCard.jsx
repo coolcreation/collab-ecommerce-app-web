@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../users/context/ShoppingCartContext';
 
 const ProductCard = ({ product }) => {
+  const { useCart } = useCart();
+
   return (
     <div className="col-md-4 mb-4">
       <div className="card h-100">
@@ -19,7 +22,12 @@ const ProductCard = ({ product }) => {
               product.reviews.reduce((acc, review) => acc + review.rating, 0) /
                 product.reviews.length
               }</p>
-          <button className="btn btn-primary">Add to Cart</button>
+          <button 
+          className="btn btn-primary"
+          onClick= {() => addToCart(product)}
+          >
+            Add to Cart
+          </button>
              <Link to={`/products/${product.id}`} className="btn btn-primary">
             View Details
           </Link>

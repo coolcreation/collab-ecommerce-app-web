@@ -1,10 +1,22 @@
-### Helper functions/methods/logic that can be shared between `desktop-web` & `mobile-app`  
+### Shared logic between `desktop-web` & `mobile-app`  
 ---   
 
----
-### Shared folder     
-- API calls
-- Frontend only requires parameters, it doesn't do implentation it only cares about what date needs to be changed/viewed/searched
-- Error handling functions  
-- Joi backend validation    
-- Possibly event handlers (React uses click type events, React Native use push requests)  
+This folder will contain **no DOM or React specific code - only vanilla JS**
+Its purpose is to allow **code reuse** across both frontend platforms.
+
+#### Shared folder     
+- **Test** - Jest will handle web/app testing in `utils` and `validation`
+- **API** - Reusable API caller for React/RN fetch wrappers, not express backend
+- **Constants** - 
+- **Utils** - 
+- **Validation** - 
+
+
+```
+shared/
+├── __tests__/    # Unit tests for utilities/validation
+├── api/          # Reusable Frontend logic for fetch wrappers 
+├── constants/    # Shared static values (roles, enums)
+├── utils/        # Generic helper functions
+├── validation/   # Input/data validation schemas
+```

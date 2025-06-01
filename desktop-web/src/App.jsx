@@ -1,11 +1,14 @@
 import React from 'react'
 import { Routes,  Route, BrowserRouter} from 'react-router-dom';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js"; 
 
 // Components
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import SubFooter from './components/SubFooter.jsx';
 import NewsletterSignupAndNewArrivals from './components/NewsletterSignupAndNewArrivals.jsx';
+import CheckoutForm from './components/CheckoutForm.jsx';
 
 // Pages
 import HomePage from './pages/HomePage.jsx';
@@ -17,7 +20,7 @@ import UserDashboard from './users/pages/UserDashboard.jsx';
 import UserProfile from './users/pages/UserProfilePage.jsx';
 import ShoppingCart from './users/pages/ShoppingCart.jsx';
 
-
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 function App() {
     
@@ -103,6 +106,16 @@ function App() {
         } />
 
         {/* <Route path='*' element={<FourZeroFourPage />} /> */}
+
+        <Route path='/checkout' element={
+          <>
+            <Navbar />
+            <Elements stripe={stripePromise}>
+              <CheckoutForm />
+            </Elements>
+            <Footer />
+          </>
+        } />
         
       </Routes>  
       </>
